@@ -40,26 +40,3 @@ consegue guardar com segurança um token de servidor; para habilitar envios em
 produção, o backend precisa fornecer um proxy autenticado apropriado. O
 repositório deste front-end não inclui nem altera esse serviço.
 
-## Publicar na Vercel
-
-1. Publique este repositório no GitHub.
-2. Na Vercel, importe o repositório e use o preset **Other** (site estático,
-   sem comando de build).
-3. Configure `src/js/config.js` com a URL HTTPS do backend e faça novo deploy.
-
-O arquivo `vercel.json` encaminha a rota inicial para a página da aplicação.
-
-## Estrutura
-
-```text
-.
-├── .gitignore
-├── README.md
-├── vercel.json
-└── src/
-    ├── css/Home.css
-    ├── html/Home.html
-    └── js/
-        ├── Home.js
-        └── config.js
-```
