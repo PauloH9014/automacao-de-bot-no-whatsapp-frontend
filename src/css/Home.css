@@ -1,0 +1,293 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, sans-serif;
+    color: #172033;
+    background: #f3f6fb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    padding: 0 max(24px, calc((100% - 960px) / 2));
+    background: #fff;
+    border-bottom: 1px solid #e5eaf2;
+}
+
+.brand {
+    color: #22325a;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 64px 24px;
+}
+
+.students-panel {
+    width: min(100%, 720px);
+    padding: 36px;
+    background: #fff;
+    border: 1px solid #e5eaf2;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgb(28 45 82 / 7%);
+}
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    margin: 0 0 9px;
+    color: #526fe5;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #172033;
+    font-size: clamp(26px, 5vw, 34px);
+}
+
+.intro > p:last-child {
+    margin-bottom: 0;
+    color: #667085;
+    line-height: 1.5;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    color: #344054;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 12px;
+    color: #172033;
+    background: #fff;
+    border: 1px solid #cfd6e4;
+    border-radius: 8px;
+    font: inherit;
+}
+
+select:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgb(82 111 229 / 30%);
+    outline-offset: 2px;
+}
+
+button {
+    min-height: 46px;
+    margin-top: 20px;
+    padding: 0 20px;
+    color: #fff;
+    background: #526fe5;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: background-color 150ms ease;
+}
+
+button:hover:not(:disabled) {
+    background: #405bd0;
+}
+
+button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.secondary-button {
+    margin-top: 12px;
+    color: #344054;
+    background: #eef1f7;
+}
+
+.secondary-button:hover:not(:disabled) {
+    background: #e1e6f0;
+}
+
+.results {
+    margin-top: 34px;
+    padding-top: 26px;
+    border-top: 1px solid #e9edf4;
+}
+
+.results-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+h2 {
+    margin-bottom: 0;
+    font-size: 19px;
+}
+
+.student-count {
+    color: #667085;
+    font-size: 14px;
+}
+
+.status {
+    margin: 18px 0 0;
+    color: #667085;
+    line-height: 1.5;
+}
+
+.status.error {
+    color: #b42318;
+}
+
+.student-list {
+    display: grid;
+    gap: 10px;
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.student-list li {
+    padding: 14px 16px;
+    background: #f8f9fc;
+    border: 1px solid #e9edf4;
+    border-radius: 8px;
+}
+
+.student-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.student-option input,
+.select-all input {
+    width: 16px;
+    height: 16px;
+    margin: 2px 0 0;
+    accent-color: #526fe5;
+}
+
+.student-details {
+    display: grid;
+    gap: 2px;
+}
+
+.student-telephone-note {
+    color: #667085;
+    font-size: 13px;
+}
+
+.selection-actions {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.select-all {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-weight: 400;
+}
+
+.selection-actions button {
+    grid-column: 1 / -1;
+    margin-top: 0;
+}
+
+.delivery-status {
+    display: block;
+    margin: 8px 0 0 26px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.delivery-status.sent {
+    color: #067647;
+}
+
+.delivery-status.failed {
+    color: #b42318;
+}
+
+.status.warning {
+    color: #b54708;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 560px) {
+    main {
+        padding: 28px 16px;
+    }
+
+    .students-panel {
+        padding: 24px 20px;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .selection-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .selection-actions button {
+        grid-column: auto;
+    }
+
+}

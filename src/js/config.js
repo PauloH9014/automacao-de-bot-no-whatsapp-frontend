@@ -1,0 +1,1 @@
+window.AUTOMATION_PYBOT_API_URL = "";

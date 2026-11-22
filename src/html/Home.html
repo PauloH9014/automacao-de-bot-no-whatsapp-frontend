@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/Home.css">
+    <script src="/src/js/config.js"></script>
+    <script src="/src/js/Home.js" defer></script>
+    <title>Turmas | AutomationPyBot</title>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#home">AutomationPyBot</a>
+    </header>
+
+    <main id="home">
+        <section class="students-panel" aria-labelledby="page-title">
+            <div class="intro">
+                <p class="eyebrow">Gerenciamento de turmas</p>
+                <h1 id="page-title">Alunos por horário</h1>
+                <p>Selecione o dia e o horário para consultar os alunos da turma.</p>
+            </div>
+
+            <form id="students-form">
+                <div class="filters">
+                    <div class="field">
+                        <label for="day">Dia da semana</label>
+                        <select name="day" id="day" required>
+                            <option value="" selected disabled>Escolha um dia</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="hour">Horário</label>
+                        <select name="hour" id="hour" required>
+                            <option value="" selected disabled>Escolha um horário</option>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="13h">13h</option>
+                            <option value="15h">15h</option>
+                            <option value="18h">18h</option>
+                            <option value="20h">20h</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="search-button" type="submit" disabled>Buscar alunos</button>
+            </form>
+            <button id="retry-button" class="secondary-button" type="button" hidden>Tentar novamente</button>
+
+            <section class="results" aria-labelledby="results-title" aria-live="polite">
+                <div class="results-heading">
+                    <h2 id="results-title">Alunos da turma</h2>
+                    <span id="student-count" class="student-count"></span>
+                </div>
+                <p id="status" class="status">Escolha um dia e horário para começar.</p>
+                <ul id="student-list" class="student-list"></ul>
+                <div id="selection-actions" class="selection-actions" hidden>
+                    <label class="select-all">
+                        <input id="select-all" type="checkbox">
+                        Selecionar todos com telefone
+                    </label>
+                    <span id="selection-count" class="student-count">0 selecionados</span>
+                    <button id="send-absence-button" type="button" disabled>Enviar aviso de falta</button>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
