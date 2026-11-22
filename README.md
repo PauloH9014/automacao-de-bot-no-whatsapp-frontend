@@ -5,6 +5,8 @@ de falta à API do projeto
 [whatsapp-bot-automation](https://github.com/PauloH9014/whatsapp-bot-automation).
 Este repositório contém somente HTML, CSS e JavaScript do front-end.
 
+**Demonstração na Vercel:** <https://automacao-de-bot-no-whatsapp-fronte.vercel.app>
+
 A integração de WhatsApp do projeto usa a
 [Evolution API](https://github.com/EvolutionAPI/evolution-api), uma API open
 source independente (não é a API oficial da Meta/WhatsApp).
